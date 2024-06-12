@@ -2,48 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Contact form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main class="page-wrapper">
+    <form class="form" action="#">
+      <fieldset class="form__fieldset flow">
+        <legend class="form__legend">Contact Us</legend>
 
-  Contact Us
+        <div class="form__name-container flex-row">
+          <div class="flex-column">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name">
+          </div>
 
-  First Name
-  This field is required
+          <div class="flex-column">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name">
+          </div>
+        </div>
+          
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email">
 
-  Last Name
-  This field is required
+        <label class="radio-query-group" for="radio-query">Query Type
+          <input type="radio" name="general" id="radio-query"> General Enquiry
+          <input type="radio" name="support" id="radio-query">Support Request
+        </label>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+        <label for="form__textarea">Message</label>
+        <textarea class="form__textarea" name="message" id="form__textarea"></textarea>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+        <label for="consent-checkbox">
+          <input type="checkbox" name="form__consent-checkbox" id="consent-checkbox">
+          I consent to being contacted by the team
+        </label>
 
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
+        <button class="form__btn" type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
