@@ -1,0 +1,120 @@
+:root {
+    --clr-green-200: hsl(148, 38%, 91%);
+    --clr-green-600: hsl(169, 82%, 27%);
+    --clr-red-400: hsl(0, 66%, 54%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-500: hsl(186, 15%, 59%);
+    --clr-neutral-900: hsl(187, 24%, 22%);
+   
+    
+    --ff-global: "Karla", sans-serif;
+    --fw-reuglar: 400;
+    --fw-bold: 700;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+html {
+    font-family: var(--ff-global);
+    font-size: 1rem;
+    font-weight: var(--fw-reuglar);
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-green-200);
+    line-height: 1.5;
+}
+
+body {
+    min-height: 100vh;
+}
+
+label::after {
+    content: '*';
+    margin-left: .3rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-green-600);
+}
+
+input, textarea {
+    border: 1px solid var(--clr-green-600);
+    border-radius: .3em;
+    padding: .5em;
+}
+
+.page-wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.form {
+    margin-block-start: 5rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: white;
+}
+
+.form__fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 1rem;
+}
+
+.form__legend {
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+}
+
+.form__name-container {
+    gap: 1rem;
+}
+
+.radio-query-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__textarea {
+    resize: none;
+}
+
+.form__btn {
+    border: none;
+    border-radius: .5em;
+    padding: 1em;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-green-600);
+    font-weight: var(--fw-bold);
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flow > * + * {
+    margin-block-start: var(--flow-space, 1rem);
+}
+
+/* PRE STYLED FROM FRONTEND MENTOR */
+.attribution {
+    margin-block-start: 5rem;
+    font-size: 11px; text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
